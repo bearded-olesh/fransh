@@ -1,0 +1,166 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Gotham pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Ubuntu', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	width: 1170px;
+	margin: 0 auto;
+}
+
+header .container {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: space-between;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	min-height: 120px;
+}
+
+.logo {
+	display: block;
+	width: 260px;
+	height: 80px;
+	background-image: url("../img/logo.png");
+	background-repeat: no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+
+.call {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.call__phone {
+	margin-right: 35px;
+}
+
+.call__phone-number {
+	font-size: 25px;
+	line-height: 24px;
+	font-weight: bold;
+	letter-spacing: -2px;
+	color: #000;
+}
+
+.call__txt {
+	font-size: 10px;
+	line-height: 10px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+.call__button {
+	position: relative;
+	height: 50px;
+}
+
+.button-f {
+	display: block;
+	background-color: #525FEA;
+	color: #FFF;
+	padding: 0 16px;
+	position: relative;
+	z-index: 2;
+	text-transform: uppercase;
+	font-weight: bold;
+	transition: .2s;
+}
+
+.button-f:hover {
+	background-color: #7f89ec;
+}
+
+.button-border {
+	height: 100%;
+	width: 100%;
+	border: 2px solid #525FEA;
+	position: absolute;
+	z-index: 1;
+	bottom: -4px;
+	right: -4px;
+}
+
+.button-f:active {
+	bottom: -4px;
+	right: -4px;
+}
+
+.button-f_header {
+	height: 50px;
+	line-height: 50px;
+}
+
+@media screen and (max-width: 1200px) {
+	.container {
+		width: 970px;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.container {
+		width: 750px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		width: auto;
+	}
+
+	header {
+		padding: 0 20px 20px 20px;
+	}
+
+	.call {
+		width: 100%;
+		justify-content: space-between;
+		-webkit-flex-wrap: wrap;
+		-moz-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		-o-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+}
+
+@media screen and (max-width: 483px) {
+	.call__phone {
+		margin: 20px 0;
+		width: 100%;
+		text-align: center;
+	}
+
+	.call {
+		justify-content: center;
+	}
+}
+
