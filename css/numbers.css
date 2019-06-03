@@ -70,6 +70,10 @@
 	transform: rotate(180deg);
 }
 
+.tile:hover .square_rotate {
+	transform: rotate(225deg);
+}
+
 .square {
 	position: absolute;
 	width: 120px;
