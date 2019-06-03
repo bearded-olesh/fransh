@@ -38,10 +38,15 @@
 .hero-info__text {
 	width: 300px;
 	color: #FFF;
-	font-size: 30px;
-	line-height: 39px;
 	margin-bottom: 40px;
 	position: relative;
+}
+
+.hero-info__text h1 {
+	font-family: Gotham Pro;
+	font-size: 30px;
+	line-height: 39px;
+	font-weight: lighter;
 }
 
 .hero-info__button {
@@ -69,6 +74,15 @@
 		width: 100%;
 		background: none;
 		background-color: rgba(0,0,0,0.7);
+	}
+
+	.hero-bg {
+		display: none;
+	}
+
+	.hero-info {
+		-ms-align-items: center;
+		align-items: center;
 	}
 
 	.hero {

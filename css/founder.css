@@ -1,0 +1,130 @@
+.founder {
+	width: 100%;
+	margin-top: 125px;
+}
+
+.founder .container {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.founder__discription {
+	width: 380px;
+	height: 400px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	justify-content: center;
+	padding-right: 40px;
+}
+
+.founder__discription h3 {
+	font-size: 40px;
+	line-height: 48px;
+}
+
+.founder__discription p {
+	font-size: 19px;
+	line-height: 23px;
+	font-weight: lighter;
+	font-style: italic;
+	margin: 30px 0;
+}
+
+.founder__video {
+	width: calc(100% - 380px);
+	position: relative;
+}
+
+.founder__video-frame {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	z-index: 2;
+}
+
+.founder__video .top-decor{
+	background-image: url("../img/yellow-top.png");
+}
+
+.founder__video .bot-decor{
+	background-image: url("../img/blue-bottom.png");
+}
+
+.sm-buttons {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.vk-button,
+.fb-button {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	margin-right: 20px;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.button-f_vk {
+	background-image: url("../img/vk-button.png");
+}
+
+.button-f_fb {
+	background-image: url("../img/fb-button.png");
+}
+
+.button-f_vk,
+.button-f_fb {
+	width: 50px;
+	height: 50px;
+}
+
+@media screen and (max-width: 992px) {
+	.founder__discription {
+		width: 300px;
+	}
+
+	.founder__video {
+		width: calc(100% - 300px);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.founder .container{
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+		padding: 0 20px;
+	}
+
+	.founder__discription,
+	.founder__video {
+		width: 100%;
+	}
+
+	.founder__video {
+		height: 400px;
+	}
+}
+
+
