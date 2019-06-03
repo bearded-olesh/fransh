@@ -20,6 +20,7 @@ a {
 
 .container {
 	width: 1170px;
+	height: 100%;
 	margin: 0 auto;
 }
 
@@ -89,6 +90,7 @@ header .container {
 	background-color: #525FEA;
 	color: #FFF;
 	padding: 0 16px;
+	text-align: center;
 	position: relative;
 	z-index: 2;
 	text-transform: uppercase;
