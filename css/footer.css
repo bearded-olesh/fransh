@@ -1,0 +1,149 @@
+footer {
+	width: 100%;
+	background-color: #000;
+	color: #FFF;
+	margin-top: 125px;
+	padding: 70px 0 130px 0;
+}
+
+footer a {
+	color: #FFF;
+	display: block;
+	font-size: 20px;
+	line-height: 29px;
+}
+
+footer .container {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.footer__form,
+.footer__about-us {
+	width: 50%;
+}
+
+footer h3 {
+	font-weight: normal;
+	font-size: 40px;
+	line-height: 48px;
+}
+
+footer p {
+	font-size: 19px;
+	line-height: 23px;
+	font-weight: lighter;
+	font-style: italic;
+}
+
+.footer__form p,
+.footer__about-us>p {
+	margin-bottom: 24px;
+}
+
+.footer__form input,
+.footer__form button {
+	width: 330px;
+	height: 64px;
+	border: none;
+}
+
+.footer__form input {
+	margin-bottom: 16px;
+	background-color: #444444;
+	font-size: 20px;
+	line-height: 29px;
+	padding-left: 24px;
+	color: #FFF;
+}
+
+.footer__button {
+	position: relative;
+	width: 330px;
+}
+
+.button-f_footer {
+	font-size: 24px;
+	letter-spacing: 3px;
+}
+
+.button-f_footer:hover {
+	cursor: pointer;
+}
+
+.footer__about-us a {
+	margin-bottom: 16px;
+}
+
+.footer__about-us>a.last {
+	margin-bottom: 40px;
+}
+
+.button-f_inst {
+	width: 50px;
+	height: 50px;
+}
+
+footer .sm-buttons .button-border {
+	border-color: #FFF;
+}
+
+footer .sm-buttons .button-f {
+	background-color: #fff;
+}
+
+footer .sm-buttons .button-f_vk {
+	background-image: url("../img/vk-footer.png");
+}
+
+footer .sm-buttons .button-f_inst {
+	background-image: url("../img/inst-footer.png");
+}
+
+@media screen and (max-width: 768px) {
+	footer .container {
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+		-ms-align-items: center;
+		align-items: center;
+	}
+
+	.footer__form,
+	.footer__about-us {
+		width: 330px;
+	}
+
+	.footer__about-us {
+		margin-top: 50px;
+	}
+
+	footer {
+		width: 100%;
+		background-color: #000;
+		color: #FFF;
+		margin-top: 125px;
+		padding: 50px 0 50px 0;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.footer__form,
+	.footer__about-us {
+		width: 300px;
+	}
+
+	.footer__form input,
+	.footer__form button {
+		width: 300px;
+	}
+
+	.footer__button {
+		width: 300px;
+	}
+}

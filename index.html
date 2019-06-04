@@ -6,8 +6,10 @@
 		<meta name="description" content="Откройте актуальный бизнесв вашем городе по франшизе">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Document</title>
+
 		<!-- fonts -->
 		<link rel="stylesheet" href="css/fonts.css">
+
 		<!-- styles -->
 		<link rel="stylesheet" href="css/header.css">
 		<link rel="stylesheet" href="css/hero.css">
@@ -15,9 +17,43 @@
 		<link rel="stylesheet" href="css/founder.css">
 		<link rel="stylesheet" href="css/reviews.css">
 		<link rel="stylesheet" href="css/numbers.css">
+		<link rel="stylesheet" href="css/packages.css">
+		<link rel="stylesheet" href="css/footer.css">
+		<link rel="stylesheet" href="css/popup.css">
+
 	</head>
 
 	<body>
+		<!-- Popup bg-->
+
+	    <div class="popup_bg" id="popup_bg"></div>
+
+	    <!-- Popup bg -->
+
+	    <!-- Popup -->
+
+	    <div class="div_popup">
+	    	<div class="popup__form">
+	    		<div class="popup-close" id="popup-close">
+					<a href="javascript:void(0)" class="button-f button-f_close"></a>
+					<div class="button-border"></div>
+				</div>
+				<h3>Оставьте заявку</h3>
+				<p>на получение подробной информации:</p>
+				<form action="#">
+					<input type="text" placeholder="Имя" id="modal-name">
+					<input type="text" placeholder="Номер телефона" id="modal-phone">
+					<input type="email" placeholder="E-mail" id="modal-email">
+					<div class="popup__button">
+						<button type="submit" class="button-f button-f_popup" id="modal-send">отправить</button>
+						<div class="button-border"></div>
+					</div>
+				</form>
+			</div>
+	    </div>
+
+	    <!-- /Popup -->
+	     
 
 		<!-- Header -->
 
@@ -26,7 +62,7 @@
 				<a href="#" class="logo"></a>
 				<div class="call">
 					<div class="call__phone">
-						<a href="tel:89078009109" class="call__phone-number">8 (907) 800-91-09</a>
+						<a href="tel:84991134548" class="call__phone-number">+7 (499) 113-45-48</a>
 						<div class="call__txt">Для звонков из России</div>
 					</div>
 					<div class="call__button">
@@ -55,7 +91,7 @@
 							</h1>
 						</div>
 						<div class="hero-info__button">
-							<a href="#" class="button-f button-f_hero">узнать больше</a>
+							<a href="javascript:void(0)" class="button-f button-f_hero" id="know_more">узнать больше</a>
 							<div class="button-border"></div>
 						</div>
 					</section>
@@ -115,7 +151,9 @@
 						</div>
 					</div>
 					<div class="founder__video">
-						<div class="founder__video-frame"></div>
+						<div class="founder__video-frame">
+							<iframe width="853" height="480" src="https://www.youtube.com/embed/8ispgt44EEo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
 						<div class="top-decor"></div>
 						<div class="bot-decor"></div>
 					</div>
@@ -266,14 +304,142 @@
 
 			<!-- / Numbers -->
 
+			<!-- Packages -->
+
+			<article class="packages">
+				<h2>выберите свой пакет:</h2>
+				<section class="package standart">
+					<div class="package__block">
+						<div class="top-decor"></div>
+						<div class="package__img"></div>
+					</div>
+					<div class="package__description">
+						<h3>Стандарт</h3>
+						<ul>
+							<li>Бренд-бук</li>
+							<li>Пошаговая инструкция по запуску франшизы</li>
+							<li>Руководство по ведению бизнеса</li>
+							<li>Финансовая модель</li>
+							<li>Должностные инструкции персонала</li>
+							<li>Помощь в подборе помещения и персонала</li>
+							<li>Первичное маркетинговое исследование</li>
+							<li>CRM для учета финансов, посетителей и мероприятий</li>
+							<li>Маркетинговая стратегия по развитию</li>
+						</ul>
+						<h4 class="price"><span>120 000 P</span></h4>
+					</div>
+				</section>
+				<section class="package optimal">
+					<div class="package__block package__block1">
+						<div class="top-decor"></div>
+						<div class="package__img"></div>
+					</div>
+					<div class="container">
+						<div class="package__description">
+							<h3>Оптимальный</h3>
+							<ul>
+								<li>Пакет «Стандарт»</li>
+								<li>Поиск помещения</li>
+								<li>Удаленное собеседование персонала</li>
+								<li>Бухгалтерская консультация</li>
+								<li>Выезд в Ваш город перед открытием</li>
+								<li>Многофункциональный чат-бот</li>
+							</ul>
+							<h4 class="price"><span>195 000 P</span></h4>
+						</div>
+					</div>
+					<div class="package__block package__block2">
+						<div class="top-decor"></div>
+						<div class="package__img"></div>
+					</div>
+				</section>
+				<section class="package auto-p">
+					<div class="package__block">
+						<div class="top-decor"></div>
+						<div class="package__img"></div>
+					</div>
+					<div class="package__description">
+						<h3>Автопилот</h3>
+						<ul>
+							<li>Пакет: «Оптимальный»</li>
+							<li>Выезд с целью организации запуска франшизы</li>
+							<li>Подбор и личное собеседование персонала</li>
+							<li>Договор с арендодателем</li>
+							<li>Создание и оформление социальных сетей</li>
+							<li>Администрирование социальных сетей в течение месяца</li>
+						</ul>
+						<h4 class="price"><span>350 000 P</span>&nbsp;&nbsp; &&nbsp;&nbsp; 20 000 P <em>royality</em></h4>
+					</div>
+				</section>
+				<div class="presentation__button">
+					<a href="javascript:void(0)" class="button-f button-f_hero" id="get_presentation">получить презентацию</a>
+					<div class="button-border"></div>
+				</div>
+			</article>
+
+			<!-- / Packages -->
+
 		</main>
 
 		<!-- / Main -->
 
-	<!-- Scripts -->
+		<!-- Footer -->
 
+		<footer>
+			<section class="container">
+				<div class="footer__form">
+					<h3>Оставьте заявку</h3>
+					<p>на получение подробной информации:</p>
+					<form action="#">
+						<input type="text" placeholder="Имя" id="footer-name">
+						<input type="text" placeholder="Номер телефона" id="footer-phone">
+						<input type="email" placeholder="E-mail" id="footer-email">
+						<div class="footer__button">
+							<button type="submit" class="button-f button-f_footer" id="footer-send">отправить</button>
+							<div class="button-border"></div>
+						</div>
+					</form>
+				</div>
+				<div class="footer__about-us">
+					<h3>О нас</h3>
+					<p>Контактная информация:</p>
+					<a href="https://goo.gl/maps/3H1aVZJofwqwtSFe7">г. Йошкар-Ола, ул. Палантая 63-Б, 4 этаж</a>
+					<a href="tel:84991134548">+7 (499) 113-45-48</a>
+					<a href="mailto:kontora@сoworking.ru">kontora@сoworking.ru</a>
+					<a class="last" href="coworking12.ru">coworking12.ru</a>
+					<p>Мы в социальных сетях:</p>
+					<div class="sm-buttons">
+						<div class="vk-button">
+							<a href="#" class="button-f button-f_vk"></a>
+							<div class="button-border"></div>
+						</div>
+						<div class="fb-button">
+							<a href="#" class="button-f button-f_inst"></a>
+							<div class="button-border"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</footer>
+
+		<!-- / Footer -->
+
+		<!-- Modal -->
+
+		
+
+		<!-- / Modal -->
+
+	<!-- Scripts -->
+	
+	<!-- jquery -->
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.maskedinput.js"></script>
+
+	<!-- custom -->
 	<script type="text/javascript" src="js/reviews.js"></script>
+	<script type="text/javascript" src="js/popup.js"></script>
+	<script type="text/javascript" src="js/form.js"></script>
 		
 	</body>
 

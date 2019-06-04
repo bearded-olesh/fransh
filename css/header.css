@@ -22,6 +22,11 @@ iframe {
 	width: 100%;
 	height: 100%;
 	border: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .container {
@@ -102,6 +107,10 @@ header .container {
 	text-transform: uppercase;
 	font-weight: bold;
 	transition: .2s;
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: cover;
+	background-size: cover;
 }
 
 .button-f:hover {
