@@ -1,0 +1,7 @@
+.ready {
+	border-color: green!important;
+}
+
+.error {
+	border-color: red!important;
+}

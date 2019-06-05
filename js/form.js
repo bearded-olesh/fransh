@@ -29,4 +29,17 @@ $(document).ready(function(){
 
     $('#modal-phone').mask('+7(999) 999-9999');
     $('#footer-phone').mask('+7(999) 999-9999');
+
+    // Заполнение формы
+
+    // $("#modal-email").on('keyup', function () {
+    //     var pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.[a-z]{2,6}$/i;
+    //     var mail = $('#modal-email');
+    //     if (mail.val().search(pattern) > -1)
+    //     {
+    //         $(this).addClass('ready');
+    //     }else{
+    //         $(this).addClass('error');
+    //     }
+    // });
 });
