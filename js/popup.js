@@ -41,7 +41,6 @@ function hide_popup(){
     $('body').css({
         'overflow': 'auto'
     });
-        console.log("ПОПАЛ!!!")
     // плавно скрываем попап и фон
     $('.popup_bg').fadeOut(500);        
     $('.div_popup').fadeOut(500);

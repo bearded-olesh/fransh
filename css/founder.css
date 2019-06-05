@@ -76,7 +76,7 @@
 }
 
 .vk-button,
-.fb-button {
+.inst-button {
 	position: relative;
 	width: 50px;
 	height: 50px;
@@ -90,12 +90,12 @@
 	background-image: url("../img/vk-button.png");
 }
 
-.button-f_fb {
-	background-image: url("../img/fb-button.png");
+.button-f_inst {
+	background-image: url("../img/inst-button.png");
 }
 
 .button-f_vk,
-.button-f_fb {
+.button-f_inst {
 	width: 50px;
 	height: 50px;
 }

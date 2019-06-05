@@ -78,6 +78,10 @@ footer p {
 	margin-bottom: 16px;
 }
 
+.footer__about-us a:hover {
+	text-decoration: underline;
+}
+
 .footer__about-us>a.last {
 	margin-bottom: 40px;
 }
