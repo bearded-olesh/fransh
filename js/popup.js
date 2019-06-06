@@ -33,7 +33,7 @@ function show_popup(){
         'overflow': 'hidden'
     });
 
-    $('.popup_bg').fadeIn(500);       
+    $('.popup_bg').fadeIn(500);
     $('.div_popup').fadeIn(500);
 }
 
