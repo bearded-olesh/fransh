@@ -1,73 +1,54 @@
-var slideNow = 1;
-var slideCount = $('#slidewrapper').children().length;
-var slideInterval = 5000;
-var navBtnId = 0;
-var translateWidth = 0;
-
 $(document).ready(function() {
-    var switchInterval = setInterval(nextSlide, slideInterval);
-
-    $('#viewport').hover(function() {
-        clearInterval(switchInterval);
-    }, function() {
-        switchInterval = setInterval(nextSlide, slideInterval);
-    });
-
-    $('#next-btn').click(function() {
-        nextSlide();
-    });
-
-    $('#prev-btn').click(function() {
-        prevSlide();
-    });
-
-    $('.slide-nav-btn').click(function() {
-        navBtnId = $(this).index();
-
-        if (navBtnId + 1 != slideNow) {
-            translateWidth = -$('#viewport').width() * (navBtnId);
-            $('#slidewrapper').css({
-                'transform': 'translate(' + translateWidth + 'px, 0)',
-                '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
-                '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
-            });
-            slideNow = navBtnId + 1;
-        }
-    });
-});
-
-
-function nextSlide() {
-    if (slideNow == slideCount || slideNow <= 0 || slideNow > slideCount) {
-        $('#slidewrapper').css('transform', 'translate(0, 0)');
-        slideNow = 1;
-    } else {
-        translateWidth = -$('#viewport').width() * (slideNow);
-        $('#slidewrapper').css({
-            'transform': 'translate(' + translateWidth + 'px, 0)',
-            '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
-            '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
-        });
-        slideNow++;
+  
+    var slidesWrapperWidth, slideWidth, slideNumber, sliderInterval;
+    //animation controls
+    var pause = 5000;
+    var transition = 500;
+  
+    function refreshVars() {
+        slideNumber = $('#slidewrapper li').length;
+        slideWidth = $('#viewport').outerWidth();
+        slidesWrapperWidth = slideWidth * slideNumber;
+    
+        $('#slidewrapper').css("width", slidesWrapperWidth+'px');
+        $('#slidewrapper li').css('width', slideWidth+'px');
+        $('#slidewrapper').css('left', - slideWidth);
+    }//end refreshVars
+    refreshVars();
+  
+    $('#slidewrapper li:last-child').prependTo('#slidewrapper');
+    
+    function ShowNextSlide() {
+        $('#slidewrapper').animate({
+            marginLeft: - slideWidth
+        }, transition, function () {
+            $('#slidewrapper li:first-child').appendTo('#slidewrapper');
+            $('#slidewrapper').css('marginLeft', '');
+        });//end animate
+    }//end show next slide
+ 
+    function ShowPrevSlide() {   
+            $('#slidewrapper').animate({
+            marginLeft: + slideWidth
+        }, transition, function () {
+            $('#slidewrapper li:last-child').prependTo('#slidewrapper');           
+            $('#slidewrapper').css('marginLeft', '');
+        });//end animate     
+    
+    }//end show prev slide
+  
+    $('#next-btn').on('click',ShowNextSlide);
+    $('#prev-btn').on('click',ShowPrevSlide);
+  
+    //autoplay 
+    function startSlider() {
+        sliderInterval = setInterval(ShowNextSlide, pause)
     }
-}
 
-function prevSlide() {
-    if (slideNow == 1 || slideNow <= 0 || slideNow > slideCount) {
-        translateWidth = -$('#viewport').width() * (slideCount - 1);
-        $('#slidewrapper').css({
-            'transform': 'translate(' + translateWidth + 'px, 0)',
-            '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
-            '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
-        });
-        slideNow = slideCount;
-    } else {
-        translateWidth = -$('#viewport').width() * (slideNow - 2);
-        $('#slidewrapper').css({
-            'transform': 'translate(' + translateWidth + 'px, 0)',
-            '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
-            '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
-        });
-        slideNow--;
-    }
-}
+    startSlider();
+
+    $('#viewport').mouseenter(function() {
+        clearInterval(sliderInterval);
+    });
+    $('#viewport').mouseleave(startSlider);
+}); //end ready
