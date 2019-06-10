@@ -100,7 +100,7 @@
 .reviews>.header {
     display: none;
     background-color: #FFE664;
-    width: 260px;
+    width: 256px;
     margin: 0 auto;
 }
 
@@ -140,7 +140,7 @@
 
 .reviews__description .header {
     background-color: #FFE664;
-    display: inline-block;
+    width: 256px;
     padding-bottom: 5px;
     margin-bottom: 32px;
 }
@@ -159,6 +159,7 @@
     font-weight: lighter;
     font-style: italic;
     font-size: 15px;
+    padding-left: 3px;
 }
 
 .reviews__description .person {
